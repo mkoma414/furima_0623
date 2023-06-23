@@ -49,7 +49,10 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
+production:
   <<: *default
-  database: furima_rails7_production
-  username: furima_rails7
-  password: <%= ENV["FURIMA_RAILS7_DATABASE_PASSWORD"] %>
+  adapter: mysql2
+  database: furima_0623_production
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
